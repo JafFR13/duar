@@ -1,0 +1,56 @@
+{
+	"name": "DemonSprt",
+	"plugin-id": "Sprite",
+	"sid": 703103165965892,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 230936152651808
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 248,
+						"height": 360,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6585338,
+						"collisionPoly": {
+							"points": [
+								0.2012011095568224,
+								0.06606603169942404,
+								0.7627627169405725,
+								0.06906910343571111,
+								0.7567566651123777,
+								1,
+								0.22522513358084645,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 741747197506772,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

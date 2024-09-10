@@ -1,0 +1,21 @@
+{
+	"name": "LavaFloor",
+	"plugin-id": "TiledBg",
+	"sid": 358974109509698,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 980,
+		"height": 980,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 6341536,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

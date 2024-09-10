@@ -1,0 +1,50 @@
+{
+	"name": "kalah",
+	"plugin-id": "Sprite",
+	"sid": 224803430673447,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1200,
+						"height": 907,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9369776,
+						"collisionPoly": {
+							"points": [
+								0.10083333333333333,
+								0.09151047409040794,
+								0.9308333333333333,
+								0.0926130099228225,
+								0.93,
+								0.8908489525909592,
+								0.1,
+								0.8908489525909592
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 357669069663651,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
