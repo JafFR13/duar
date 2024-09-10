@@ -1,0 +1,1008 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Sensitivity",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 434634422251826
+		},
+		{
+			"eventType": "variable",
+			"name": "skor",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 436084352951482
+		},
+		{
+			"eventType": "variable",
+			"name": "hp",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 224172560669191
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 635332474320907
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-object",
+					"objectClass": "Demon",
+					"sid": 916861632151399,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "HandGun",
+					"sid": 107855507381858,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "look-parallel-to-layout",
+					"objectClass": "3DCamera",
+					"sid": 673148416903546,
+					"parameters": {
+						"cam-x": "Player.X",
+						"cam-y": "Player.Y",
+						"cam-z": "Player.ZElevation + 10",
+						"look-angle": "Player.Angle"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "kalah",
+					"sid": 503463039650417,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "reset",
+					"sid": 952190860391126,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "bg",
+					"sid": 895605699715503,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "gdagdi",
+					"sid": 686303433295415,
+					"parameters": {
+						"audio-file": "p0pGYestQWJs.128",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "menang",
+					"sid": 420413355134799,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "skor",
+					"sid": 868762719181855,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"\""
+					}
+				}
+			],
+			"sid": 936813388156865
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 331754769502717
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "3DCamera",
+					"sid": 905886387693084,
+					"parameters": {
+						"x": "Player.X",
+						"y": "Player.Y",
+						"z": "Player.ZElevation + 10",
+						"which": "camera"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "Player",
+					"sid": 139401651718105,
+					"parameters": {
+						"angle": "3DCamera.CameraXRotation"
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "Demon",
+					"sid": 581789725875729,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"object": "Player",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				}
+			],
+			"sid": 627689535478435
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 925513058134065,
+					"parameters": {
+						"key": 87
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-forward",
+					"objectClass": "Player",
+					"sid": 461620193641472,
+					"parameters": {
+						"distance": "10"
+					}
+				}
+			],
+			"sid": 192856571887605
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 189551758440729,
+					"parameters": {
+						"key": 83
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-forward",
+					"objectClass": "Player",
+					"sid": 201620592636934,
+					"parameters": {
+						"distance": "-10"
+					}
+				}
+			],
+			"sid": 720277395176332
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 370382380429298,
+					"parameters": {
+						"key": 65
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-at-angle",
+					"objectClass": "Player",
+					"sid": 750289863045542,
+					"parameters": {
+						"angle": "Player.Angle - 90",
+						"distance": "10"
+					}
+				}
+			],
+			"sid": 810088872745553
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 724511576098295,
+					"parameters": {
+						"key": 68
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-at-angle",
+					"objectClass": "Player",
+					"sid": 917968181007237,
+					"parameters": {
+						"angle": "Player.Angle + 90",
+						"distance": "10"
+					}
+				}
+			],
+			"sid": 314909854438730
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 249397362379364,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "start-animation",
+					"objectClass": "HandGun",
+					"sid": 328745866064407,
+					"parameters": {
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Player",
+					"sid": 441928652335171,
+					"parameters": {
+						"object": "PlayerBullet",
+						"layer": "0",
+						"image-point": "1",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 527521665988327
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Demon",
+					"sid": 591764801937896,
+					"parameters": {
+						"object": "PlayerBullet"
+					}
+				},
+				{
+					"id": "compare-z-elevation",
+					"objectClass": "PlayerBullet",
+					"sid": 327260023164873,
+					"parameters": {
+						"which": "z-elevation",
+						"comparison": 3,
+						"z-elevation": "13"
+					}
+				},
+				{
+					"id": "compare-z-elevation",
+					"objectClass": "PlayerBullet",
+					"sid": 193862398926558,
+					"parameters": {
+						"which": "z-elevation",
+						"comparison": 4,
+						"z-elevation": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Demon",
+					"sid": 732406877054987
+				},
+				{
+					"id": "destroy",
+					"objectClass": "PlayerBullet",
+					"sid": 384978905572810
+				}
+			],
+			"sid": 769435763541792
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-movement",
+					"objectClass": "Mouse",
+					"sid": 249301582818699
+				}
+			],
+			"actions": [
+				{
+					"id": "rotate-camera",
+					"objectClass": "3DCamera",
+					"sid": 923628485310393,
+					"parameters": {
+						"rotate-x": "Mouse.MovementX / (11 - Sensitivity)",
+						"rotate-y": "Mouse.MovementY / (11 - Sensitivity)",
+						"min-polar-angle": "0",
+						"max-polar-angle": "180"
+					}
+				}
+			],
+			"sid": 626948325834201
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-click",
+					"objectClass": "Mouse",
+					"sid": 338726496448595
+				}
+			],
+			"actions": [
+				{
+					"id": "request-pointer-lock",
+					"objectClass": "Mouse",
+					"sid": 760532957446829
+				}
+			],
+			"sid": 780448404921910
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 695593306482797,
+					"parameters": {
+						"interval-seconds": "0.01"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-z-elevation",
+					"objectClass": "PlayerBullet",
+					"sid": 239994276154427,
+					"parameters": {
+						"z": "Self.ZElevation + cos(3DCamera.CameraYRotation) * 3DCamera.LookZ + 0.1"
+					}
+				}
+			],
+			"sid": 172240244518152
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 565765079247155,
+					"parameters": {
+						"object": "Demon"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 991130936156684,
+					"parameters": {
+						"variable": "hp",
+						"value": "1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Demon",
+					"sid": 832711790890303
+				}
+			],
+			"sid": 753855250798725
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 859138721407149,
+					"parameters": {
+						"interval-seconds": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "spawner",
+					"sid": 317993773656776,
+					"parameters": {
+						"object": "Demon",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 754835942299348
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Demon",
+					"sid": 583820350049861,
+					"parameters": {
+						"object": "tembok"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-stop-on-solids",
+					"objectClass": "Demon",
+					"sid": 960539621688059,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"enabled": true
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "PlayerBullet",
+					"sid": 941251579197515
+				}
+			],
+			"sid": 698050819822763
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "reset",
+					"sid": 243245218753420
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 771060097661912
+				},
+				{
+					"id": "reset-eventvar",
+					"objectClass": "System",
+					"sid": 340270848073779,
+					"parameters": {
+						"variable": "skor"
+					}
+				},
+				{
+					"id": "reset-eventvar",
+					"objectClass": "System",
+					"sid": 184287884757726,
+					"parameters": {
+						"variable": "hp"
+					}
+				}
+			],
+			"sid": 627735573972950
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "Demon",
+					"sid": 803514246182473
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 787010001266441,
+					"parameters": {
+						"variable": "skor",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "skor",
+					"sid": 998158808505854,
+					"parameters": {
+						"text": "skor"
+					}
+				}
+			],
+			"sid": 471414617732097
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 376999197700687,
+					"parameters": {
+						"variable": "hp",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "aim",
+					"sid": 940535805463576,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "gdagdi",
+					"sid": 308365123973387,
+					"parameters": {
+						"tag": "\"\"",
+						"db": "-100",
+						"duration": "2",
+						"ending": "stop"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 466733499908120
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "bg",
+					"sid": 965205842611371,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "release-pointer-lock",
+					"objectClass": "Mouse",
+					"sid": 439580216506202
+				},
+				{
+					"id": "destroy",
+					"objectClass": "spawner",
+					"sid": 976782227459998
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "kalah",
+					"sid": 193004930165098,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "reset",
+					"sid": 829310389255810,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 815053991775115
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 816676683722644,
+					"parameters": {
+						"variable": "hp",
+						"comparison": 3,
+						"value": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "hp",
+					"sid": 509363327247896,
+					"parameters": {
+						"text": "hp"
+					}
+				}
+			],
+			"sid": 665790762797582
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 371094722887275,
+					"parameters": {
+						"object": "moveforward"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-forward",
+					"objectClass": "Player",
+					"sid": 874042768567114,
+					"parameters": {
+						"distance": "10"
+					}
+				}
+			],
+			"sid": 268071458321045
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 433961413080344,
+					"parameters": {
+						"object": "moveback"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-forward",
+					"objectClass": "Player",
+					"sid": 296879352302732,
+					"parameters": {
+						"distance": "-10"
+					}
+				}
+			],
+			"sid": 494530679383365
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 832520010799515,
+					"parameters": {
+						"object": "moveleft"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-at-angle",
+					"objectClass": "Player",
+					"sid": 701745100571009,
+					"parameters": {
+						"angle": "Player.Angle - 90",
+						"distance": "10"
+					}
+				}
+			],
+			"sid": 581981355535368
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 170687919985335,
+					"parameters": {
+						"object": "moveright"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-at-angle",
+					"objectClass": "Player",
+					"sid": 650006797948760,
+					"parameters": {
+						"angle": "Player.Angle + 90",
+						"distance": "10"
+					}
+				}
+			],
+			"sid": 763003231472023
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 101501835484778,
+					"parameters": {
+						"object": "dor"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "start-animation",
+					"objectClass": "HandGun",
+					"sid": 278264978286808,
+					"parameters": {
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Player",
+					"sid": 802501908392590,
+					"parameters": {
+						"object": "PlayerBullet",
+						"layer": "0",
+						"image-point": "1",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 335427434859001
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 994225913987134,
+					"parameters": {
+						"variable": "skor",
+						"comparison": 0,
+						"value": "30"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "release-pointer-lock",
+					"objectClass": "Mouse",
+					"sid": 783874981717466
+				},
+				{
+					"id": "destroy",
+					"objectClass": "spawner",
+					"sid": 173319197291867
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "gdagdi",
+					"sid": 771083926780659,
+					"parameters": {
+						"tag": "\"\"",
+						"db": "-100",
+						"duration": "2",
+						"ending": "stop"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "aim",
+					"sid": 827333740544337,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "menang",
+					"sid": 362318426057622,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "reset",
+					"sid": 721675168147230,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "bg",
+					"sid": 278192774644616,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 919372777274641
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "PlayerBullet",
+					"sid": 416617011558325,
+					"parameters": {
+						"object": "tembok"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "PlayerBullet",
+					"sid": 491414323396216
+				}
+			],
+			"sid": 780355419876876
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-pointer-locked",
+					"objectClass": "Mouse",
+					"sid": 774256536173721
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "moveback",
+					"sid": 481316132551524,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "moveforward",
+					"sid": 180503810408028,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "moveleft",
+					"sid": 848291388964543,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "moveright",
+					"sid": 326737641631410,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "dor",
+					"sid": 494150918935414,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 413968236355959
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-pointer-unlocked",
+					"objectClass": "Mouse",
+					"sid": 910412161433854
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "moveback",
+					"sid": 929752737163210,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "moveforward",
+					"sid": 269133211127247,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "moveleft",
+					"sid": 432254048307081,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "moveright",
+					"sid": 530175204445720,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "dor",
+					"sid": 182413360553081,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 921388167074443
+		}
+	],
+	"sid": 741466824789240
+}
